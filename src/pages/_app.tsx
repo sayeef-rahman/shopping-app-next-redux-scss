@@ -1,6 +1,22 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+"use client";
+import "@/styles/globals.css";
+import type { AppProps } from "next/app";
+import { Provider } from "react-redux";
+import { configureStore } from "@reduxjs/toolkit";
+import cartSlice from "@/redux/slices/cartSlice";
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+const store = configureStore({
+  reducer: {
+    cart: cartSlice,
+  },
+});
+
+function App({ Component, pageProps }: AppProps) {
+  return (
+    <Provider store={store}>
+      <Component {...pageProps} />
+    </Provider>
+  );
 }
+
+export default App;
