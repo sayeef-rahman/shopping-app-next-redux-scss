@@ -1,23 +1,36 @@
 "use client";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-interface CounterState {
-  value: number;
+interface IProducts {
+  id: number | null;
+  name: string | null;
+  image: string | null;
 }
 
-const initialState: CounterState = {
-  value: 0,
-};
+interface IState {
+  cart: IProducts[];
+}
+
+const initialState: IProducts[] = [];
 
 const cartSlice = createSlice({
   name: "cartSlice",
   initialState,
   reducers: {
-    addProductToCart: (state) => {
-      state.value += 1;
+    addProductToCart: (state, action: PayloadAction<IProducts>) => {
+      const productToAdd = action.payload;
+
+      const isProductInCart = state.some(
+        (product) => product.id === productToAdd.id
+      );
+
+      if (!isProductInCart) {
+        state.push(productToAdd);
+      }
     },
+
     removeProductFromCart: (state) => {
-      state.value -= 1;
+      console.log(state);
     },
   },
 });
