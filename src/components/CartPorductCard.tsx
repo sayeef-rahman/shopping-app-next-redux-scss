@@ -14,6 +14,7 @@ const CartPorductCard = () => {
           <input type="number" value={1} disabled />
           <button>-</button>
         </div>
+        <button>Delete</button>
       </div>
     </div>
   );
