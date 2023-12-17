@@ -6,7 +6,7 @@ export default function NavBar() {
   return (
     <nav className="navigation">
       <Link href="/" className="brand-name">
-        MacroSoft
+        Shop
       </Link>
       <button className="hamburger">
         {/* icon from heroicons.com */}
@@ -30,9 +30,6 @@ export default function NavBar() {
           </li>
           <li>
             <a href="/about">About</a>
-          </li>
-          <li>
-            <a href="/contact">Contact</a>
           </li>
         </ul>
       </div>
