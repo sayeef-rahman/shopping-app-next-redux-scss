@@ -2,11 +2,13 @@
 import "@/styles/main.css";
 import "@/styles/globals.scss";
 import "@/styles/product-list.scss";
+import "@/styles/navbar.scss";
 import type { AppProps } from "next/app";
 import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
 import cartSlice from "@/redux/slices/cartSlice";
 import userSlice from "@/redux/slices/userSlice";
+import NavBar from "@/components/NavBar";
 
 const store = configureStore({
   reducer: {
@@ -18,6 +20,7 @@ const store = configureStore({
 function App({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
+      <NavBar />
       <Component {...pageProps} />
     </Provider>
   );

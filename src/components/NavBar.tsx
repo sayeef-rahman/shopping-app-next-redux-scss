@@ -4,35 +4,36 @@ import React from "react";
 
 export default function NavBar() {
   return (
-    <nav className="navigation">
-      <Link href="/" className="brand-name">
-        Shop
-      </Link>
-      <button className="hamburger">
-        {/* icon from heroicons.com */}
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5"
-          viewBox="0 0 20 20"
-          fill="white"
-        >
-          <path
-            fillRule="evenodd"
-            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
-            clipRule="evenodd"
-          />
-        </svg>
-      </button>
-      <div className="navigation-menu">
-        <ul>
-          <li>
-            <a href="/home">Home</a>
-          </li>
-          <li>
-            <a href="/about">About</a>
-          </li>
-        </ul>
+    <div className="nav container">
+      <input type="checkbox" id="nav-check" />
+      <div className="nav-header">
+        <div className="nav-title">JoGeek</div>
       </div>
-    </nav>
+      <div className="nav-btn">
+        <label htmlFor="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div className="nav-links">
+        <a href="//github.io/jo_geek" target="_blank">
+          Github
+        </a>
+        <a href="http://stackoverflow.com/users/4084003/" target="_blank">
+          Stackoverflow
+        </a>
+        <a href="https://in.linkedin.com/in/jonesvinothjoseph" target="_blank">
+          LinkedIn
+        </a>
+        <a href="https://codepen.io/jo_Geek/" target="_blank">
+          Codepen
+        </a>
+        <a href="https://jsfiddle.net/user/jo_Geek/" target="_blank">
+          JsFiddle
+        </a>
+      </div>
+    </div>
   );
 }
