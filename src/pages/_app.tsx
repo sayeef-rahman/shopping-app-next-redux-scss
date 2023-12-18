@@ -3,6 +3,7 @@ import "@/styles/main.css";
 import "@/styles/globals.scss";
 import "@/styles/product-list.scss";
 import "@/styles/navbar.scss";
+import "@/styles/cart-product.scss";
 import type { AppProps } from "next/app";
 import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";

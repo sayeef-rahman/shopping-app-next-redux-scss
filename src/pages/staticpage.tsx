@@ -1,3 +1,4 @@
+import CartPorductCard from "@/components/CartPorductCard";
 import ProductCard from "@/components/ProductCard";
 import { ProductType } from "@/utils/dataTypes";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
@@ -25,8 +26,8 @@ const StaticPage: NextPage<Props> = ({ products, error, isLoading }: Props) => {
   }
 
   return (
-    <div className="container">
-      <h1>Product List</h1>
+    // <div className="container" >
+    <div className="container" style={{ display: "flex" }}>
       <div className="contenedorCards">
         <ProductCard />
         <ProductCard />
@@ -40,7 +41,14 @@ const StaticPage: NextPage<Props> = ({ products, error, isLoading }: Props) => {
         <ProductCard />
         <ProductCard />
       </div>
+      <div className="cart-list">
+        <h2 className="cart-title">Cart List</h2>
+        <hr />
+        <CartPorductCard />
+      </div>
     </div>
+
+    // </div>
   );
 };
 

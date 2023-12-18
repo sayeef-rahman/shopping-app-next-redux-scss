@@ -64,11 +64,28 @@ body {
   }
 }
 
+.cart-list {
+  width: 25%;
+  background-color: #d8d8d8;
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .contenedorCards {
+    width: 100% !important;
+  }
+  .cart-list {
+    width: 100%;
+    background-color: #bbbbbb;
+  }
+}
 .contenedorCards {
   @include flex;
   min-height: 100vh;
   padding: 20px 0;
   box-sizing: border-box;
+  width: 75%;
   .card {
     width: 300px;
     transition: ease all 0.3s;
