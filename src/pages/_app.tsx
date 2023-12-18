@@ -1,5 +1,5 @@
 "use client";
-import "@/styles/main.css";
+import "@/styles/main.scss";
 import "@/styles/globals.scss";
 import "@/styles/product-list.scss";
 import "@/styles/navbar.scss";
