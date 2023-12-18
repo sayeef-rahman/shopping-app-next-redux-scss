@@ -1,3 +1,4 @@
+import ProductCard from "@/components/ProductCard";
 import { ProductType } from "@/utils/dataTypes";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import React from "react";
@@ -24,13 +25,21 @@ const StaticPage: NextPage<Props> = ({ products, error, isLoading }: Props) => {
   }
 
   return (
-    <div>
+    <div className="container">
       <h1>Product List</h1>
-      {/* <ul>
-        {products?.map((product) => (
-          <li key={product.id}>{product.title}</li>
-        ))}
-      </ul> */}
+      <div className="contenedorCards">
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+      </div>
     </div>
   );
 };
