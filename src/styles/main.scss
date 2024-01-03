@@ -1,11 +1,7 @@
-@import "./cart-product.scss";
-@import "./category.scss";
-@import "./greeting.scss";
-@import "./homepage.scss";
-@import "./main.scss";
-@import "./navbar.scss";
-@import "./product-list.scss";
-@import "./variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Roboto:wght@300;400;900&display=swap");
+* {
+  font-family: "Roboto Condensed", sans-serif;
+}
 
 .container,
 .container-fluid,
@@ -14,13 +10,14 @@
 .container-lg,
 .container-md,
 .container-sm {
-  --bs-gutter-x: 0rem;
+  --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   width: 100%;
   padding-right: calc(var(--bs-gutter-x) * 0.5);
   padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-right: auto;
   margin-left: auto;
+  /* background-color: #fbfbfd; */
 }
 
 @media (min-width: 576px) {
@@ -29,7 +26,6 @@
     max-width: 540px;
   }
 }
-
 @media (min-width: 768px) {
   .container-md,
   .container-sm,
@@ -37,7 +33,6 @@
     max-width: 720px;
   }
 }
-
 @media (min-width: 992px) {
   .container-lg,
   .container-md,
@@ -46,7 +41,6 @@
     max-width: 960px;
   }
 }
-
 @media (min-width: 1200px) {
   .container-xl,
   .container-lg,
@@ -56,7 +50,6 @@
     max-width: 1140px;
   }
 }
-
 @media (min-width: 1400px) {
   .container-xxl,
   .container-xl,

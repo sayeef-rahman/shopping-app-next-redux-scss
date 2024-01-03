@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../public/homePageImage.jpg");
+  opacity: 0.9;
+  // position: absolute;
+  // margin: auto;
+  // top: 0;
+  // right: 0;
+  // bottom: 0;
+  // left: 0;
+  border-radius: 3px;
+}
+
+.parent-wrapper {
+  // width: 400px;
+  // height: 400px;
+  margin: 40px auto 0;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+.subscribe-wrapper {
+  left: -30px;
+  right: -30px;
+  height: 220px;
+  padding: 30px;
+  background-position-x: 272%;
+  background-position-y: -1px;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  border-radius: 4px;
+  color: #333;
+  box-shadow: 0px 0px 100px 1000px rgba(17, 1, 1, 0.4);
+}
+
+.homepage-form {
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.subscribe-wrapper h4 {
+  text-align: center;
+  // font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  //   letter-spacing: 3px;
+  line-height: 28px;
+}
+.subscribe-wrapper p {
+  text-align: center;
+  // font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  //   font-weight: bold;
+  //   letter-spacing: 3px;
+  line-height: 28px;
+}
+
+.subscribe-wrapper input {
+  //   position: absolute;
+  font-size: 16px;
+  margin-top: 10px;
+  bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #d4d4d4;
+  padding: 10px;
+  width: 65%;
+  background: transparent;
+  transition: all 0.25s ease;
+}
+
+.subscribe-wrapper input:focus {
+  outline: none;
+  border-bottom: 1px solid #000000;
+}
+
+.subscribe-wrapper .submit-btn {
+  display: block;
+  margin: 15px 0px;
+  border-radius: 30px;
+  background-color: #000000;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  right: -10px;
+  bottom: 30px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: -5px 6px 20px 0px rgba(51, 51, 51, 0.4);
+}
+
+.subscribe-wrapper .submit-btn:hover {
+  background-color: #3482c2;
+  font-weight: bold;
+}

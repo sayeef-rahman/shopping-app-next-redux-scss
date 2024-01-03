@@ -1,21 +1,42 @@
 "use client";
-import "@/styles/main.css";
 import "@/styles/globals.scss";
 import type { AppProps } from "next/app";
 import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
 import cartSlice from "@/redux/slices/cartSlice";
+import userSlice from "@/redux/slices/userSlice";
+import NavBar from "@/components/NavBar";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const store = configureStore({
   reducer: {
     cart: cartSlice,
+    user: userSlice,
   },
 });
 
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
+
 function App({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+  const [isNavbar, setIsNavbar] = useState<boolean>(true);
+  useEffect(() => {
+    if (router.pathname === "/" || router.pathname === "/greeting") {
+      setIsNavbar(false);
+    } else {
+      setIsNavbar(true);
+    }
+  }, [router.pathname]);
+
   return (
     <Provider store={store}>
+      {isNavbar && <NavBar />}
       <Component {...pageProps} />
+      <ToastContainer />
     </Provider>
   );
 }
