@@ -6,13 +6,14 @@ import {
 import { ProductType } from "@/utils/dataTypes";
 import { Dispatch, UnknownAction } from "@reduxjs/toolkit";
 import { useRouter } from "next/router";
-import { useDispatch } from "react-redux";
-import noImage from "../../public/noIcon.jpg";
-import DeleteIcon from "./DeleteIcon";
-import MinusIcon from "./MinusIcon";
-import PlusIcon from "./PlusIcon";
 import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
+import noImage from "../../public/noIcon.jpg";
+import DeleteIcon from "../icons/DeleteIcon";
+import MinusIcon from "../icons/MinusIcon";
+import PlusIcon from "../icons/PlusIcon";
+import Image from "next/image";
 
 type ProductPropsType = {
   product: ProductType;
@@ -54,7 +55,7 @@ const CartPorductCard = ({ product }: ProductPropsType) => {
       <div>
         <img
           className="cart-product-image"
-          src={product.thumbnail ?? noImage}
+          src={product.thumbnail ?? ""}
           alt="cart-product-image"
         />
       </div>
@@ -66,14 +67,14 @@ const CartPorductCard = ({ product }: ProductPropsType) => {
             onClick={() => handleReduceQuantity()}
             disabled={product.cartCount === 1}
           >
-            <MinusIcon />
+            <MinusIcon disabled={product.cartCount === 1} />
           </button>
           <div className="cart-product-quantity">{product.cartCount}</div>
           <button
             onClick={() => handleIncreaseQuntity()}
             disabled={product.cartCount === product.stock}
           >
-            <PlusIcon />
+            <PlusIcon disabled={product.cartCount === product.stock} />
           </button>
         </div>
         <button
