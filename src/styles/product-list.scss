@@ -148,6 +148,8 @@ body {
       box-sizing: border-box;
       position: relative;
       box-shadow: 0 0 20px 10px rgba($blackColor, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
       // transition: ease all 0.3s;
       &:hover {
         // transform: translateY(-10px);

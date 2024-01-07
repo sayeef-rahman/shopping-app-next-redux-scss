@@ -3,12 +3,12 @@
 .cart-title {
   text-align: center;
   color: #666666;
-  padding: 10px 0 5px 0;
+  padding: 10px 0 0px 0;
 }
 .cart-cart-amount {
   text-align: center;
   color: #666666;
-  padding: 10px 0;
+  padding: 5px 0;
 }
 @media (max-width: 768px) {
   .cart-title {
@@ -50,7 +50,7 @@
 }
 .cart-product-image {
   width: 80px;
-  height: 100px;
+  aspect-ratio: 1;
   border-radius: 5px;
 }
 .cart-product-name {
