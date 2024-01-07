@@ -2,25 +2,25 @@
 
 .cart-title {
   text-align: center;
-  color: $primaryColor;
+  color: #666666;
   padding: 10px 0 5px 0;
 }
 .cart-cart-amount {
   text-align: center;
-  color: $primaryColor;
+  color: #666666;
   padding: 10px 0;
 }
 @media (max-width: 768px) {
   .cart-title {
     text-align: center;
-    color: $primaryColor;
+    color: #666666;
     padding: 10px 0;
   }
   .cart-cart-amount {
     font-weight: 500;
     font-size: 16px;
     text-align: center;
-    color: $primaryColor;
+    color: #666666;
     padding: 10px 0;
   }
 }
