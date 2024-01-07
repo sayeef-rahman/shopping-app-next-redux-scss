@@ -1,19 +1,17 @@
 import ProductCard from "@/components/ProductCard";
-import { CategoriesType, ProductType } from "@/utils/dataTypes";
-
-import CartPorductCard from "@/components/CartPorductCard";
+import CartPage from "@/components/cart/CartPage";
+import { ProductType } from "@/utils/dataTypes";
 import type {
   GetServerSideProps,
   GetServerSidePropsContext,
   InferGetStaticPropsType,
   PreviewData,
 } from "next";
+import { useRouter } from "next/router";
 import { ParsedUrlQuery } from "querystring";
+import { useEffect, useMemo, useState } from "react";
 import { useSelector } from "react-redux";
 import type { RootState } from "../_app";
-import { useRouter } from "next/router";
-import { useEffect, useMemo, useState } from "react";
-import CartPage from "@/components/CartPage";
 
 const CategoryPage = ({
   products,

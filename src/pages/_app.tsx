@@ -1,13 +1,13 @@
 "use client";
-import "@/styles/globals.scss";
-import type { AppProps } from "next/app";
-import { Provider } from "react-redux";
-import { configureStore } from "@reduxjs/toolkit";
+import NavBar from "@/components/NavBar";
 import cartSlice from "@/redux/slices/cartSlice";
 import userSlice from "@/redux/slices/userSlice";
-import NavBar from "@/components/NavBar";
+import "@/styles/globals.scss";
+import { configureStore } from "@reduxjs/toolkit";
+import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import { Provider } from "react-redux";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
